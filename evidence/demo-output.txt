@@ -1,0 +1,28 @@
+DÉMONSTRATION RÉELLE : spring-security-custom-login sur http://localhost:8080
+Formulaire personnalisé branché sur /authenticate (admin/1234, user/1111)
+------------------------------------------------------------
+[1] Page de connexion personnalisée (publique)
+GET /login                     -> HTTP 200
+------------------------------------------------------------
+[2] Accès à un espace protégé SANS authentification
+GET /user/dashboard            -> HTTP 302   (Location: http://localhost:8080/login)
+GET /admin/dashboard           -> HTTP 302   (Location: http://localhost:8080/login)
+------------------------------------------------------------
+[3] Connexion RÉUSSIE avec USER (user/1111) -> doit rediriger vers /home
+POST /authenticate (user/1111) -> Location: http://localhost:8080/home
+GET /home            [USER]    -> HTTP 200   (autorisé)
+GET /user/dashboard  [USER]    -> HTTP 200   (autorisé)
+GET /admin/dashboard [USER]    -> HTTP 403   (refusé : 403)
+------------------------------------------------------------
+[4] Connexion ÉCHOUÉE (mauvais mot de passe) -> /login?error=true
+POST /authenticate (user/xxxx) -> Location: http://localhost:8080/login?error=true
+------------------------------------------------------------
+[5] Connexion ADMIN (admin/1234)
+GET /admin/dashboard [ADMIN]   -> HTTP 200   (autorisé)
+GET /user/dashboard  [ADMIN]   -> HTTP 200   (autorisé)
+------------------------------------------------------------
+[6] Déconnexion -> /login?logout=true
+POST /logout                   -> Location: http://localhost:8080/login?logout=true
+GET /admin/dashboard (après logout) -> HTTP 302   (de nouveau protégé)
+------------------------------------------------------------
+VÉRIFICATIONS HTTP RÉUSSIES

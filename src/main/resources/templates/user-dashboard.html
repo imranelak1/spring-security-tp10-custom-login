@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Utilisateur</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="card">
+        <span class="role-tag role-user">Rôles USER / ADMIN</span>
+        <h2>Espace Utilisateur</h2>
+        <p>Accessible aux rôles <strong>USER</strong> et <strong>ADMIN</strong>.</p>
+
+        <div class="who">
+            Connecté en tant que <strong sec:authentication="name">user</strong>
+        </div>
+
+        <div class="actions">
+            <a class="btn btn-ghost" th:href="@{/home}">Retour à l'accueil</a>
+            <form class="inline" th:action="@{/logout}" method="post">
+                <button type="submit" class="btn btn-logout">Déconnexion</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

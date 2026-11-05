@@ -1,0 +1,79 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------< ma.fstg.security:spring-security-custom-login >------------
+[INFO] Building spring-security-custom-login 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-devtools/3.3.5/spring-boot-devtools-3.3.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-devtools/3.3.5/spring-boot-devtools-3.3.5.pom (2.3 kB at 787 B/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-devtools/3.3.5/spring-boot-devtools-3.3.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-devtools/3.3.5/spring-boot-devtools-3.3.5.jar (203 kB at 427 kB/s)
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ spring-security-custom-login ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ spring-security-custom-login ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ spring-security-custom-login ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ spring-security-custom-login ---
+[INFO] skip non existing resourceDirectory C:\Users\acer\Desktop\tp_lachguer\spring-security-tp10-custom-login\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ spring-security-custom-login ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ spring-security-custom-login ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ma.fstg.security.CustomLoginSecurityTest
+12:27:53.375 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ma.fstg.security.CustomLoginSecurityTest]: CustomLoginSecurityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:27:53.659 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ma.fstg.security.CustomLoginApplication for test class ma.fstg.security.CustomLoginSecurityTest
+12:27:54.153 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-11-05T12:27:54.890+01:00  INFO 18220 --- [spring-security-custom-login] [           main] m.fstg.security.CustomLoginSecurityTest  : Starting CustomLoginSecurityTest using Java 23.0.2 with PID 18220 (started by acer in C:\Users\acer\Desktop\tp_lachguer\spring-security-tp10-custom-login)
+2026-11-05T12:27:54.893+01:00  INFO 18220 --- [spring-security-custom-login] [           main] m.fstg.security.CustomLoginSecurityTest  : No active profile set, falling back to 1 default profile: "default"
+2026-11-05T12:27:57.213+01:00  INFO 18220 --- [spring-security-custom-login] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-11-05T12:27:58.708+01:00  INFO 18220 --- [spring-security-custom-login] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-05T12:27:58.709+01:00  INFO 18220 --- [spring-security-custom-login] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-05T12:27:58.712+01:00  INFO 18220 --- [spring-security-custom-login] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2026-11-05T12:27:58.768+01:00  INFO 18220 --- [spring-security-custom-login] [           main] m.fstg.security.CustomLoginSecurityTest  : Started CustomLoginSecurityTest in 4.654 seconds (process running for 7.139)
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\acer\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.263 s -- in ma.fstg.security.CustomLoginSecurityTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ spring-security-custom-login ---
+[INFO] Building jar: C:\Users\acer\Desktop\tp_lachguer\spring-security-tp10-custom-login\target\spring-security-custom-login-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.5:repackage (repackage) @ spring-security-custom-login ---
+[INFO] Replacing main artifact C:\Users\acer\Desktop\tp_lachguer\spring-security-tp10-custom-login\target\spring-security-custom-login-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\acer\Desktop\tp_lachguer\spring-security-tp10-custom-login\target\spring-security-custom-login-1.0.0.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31.923 s
+[INFO] Finished at: 2026-11-05T12:28:05+01:00
+[INFO] ------------------------------------------------------------------------
